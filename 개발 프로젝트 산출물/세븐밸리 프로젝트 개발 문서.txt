@@ -1,0 +1,27 @@
+-------------------
+프로젝트 환경설정
+-------------------
+Project: Gradle Project
+Spring Boot: 2.7.7
+Languge: Java
+Packaging: War
+Java: 11
+IDE: InteliJ
+형상관리: git
+DB: mysql
+
+-------------------
+Project Metadata
+-------------------
+groupId: sevenvalley
+artifatId: sevenvalley-spring
+Dependencies: Spring Web, Thymeleaf
+
+
+-------------------
+web-was 접속정보
+-------------------
+
+-------------------
+DB 접속정보
+-------------------

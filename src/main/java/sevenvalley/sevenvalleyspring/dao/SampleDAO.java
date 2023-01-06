@@ -1,5 +1,6 @@
 package sevenvalley.sevenvalleyspring.dao;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -18,10 +19,18 @@ public class SampleDAO extends AbstractDAO {
 		return list;
 	}
 
+	@SuppressWarnings("unchecked")
 	public Map<String, Object> AdminDoLogin(HashMap<String, Object> params) {
 		HashMap<String, Object> hMap = new HashMap<String, Object>();
 		int cnt = selectCnt("sample.selectTest", params);
 		hMap.put("cnt",cnt);
 		return hMap;
+	}
+
+	@SuppressWarnings("unchecked")
+	public Map<String, Object> adminList(HashMap<String, Object> params) {
+		List<HashMap<String, Object>> resultList = selectList("sample.adminList",params);
+		params.put("resultList", resultList);
+		return params;
 	}
 }

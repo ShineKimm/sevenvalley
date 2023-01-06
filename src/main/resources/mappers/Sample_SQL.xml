@@ -8,4 +8,10 @@
 		FROM USER_INFO
 	</select>
 
+	<select id="adminList" parameterType="hashmap" resultType="hashmap">
+		SELECT user_staff, user_name, user_password, user_stat
+		FROM USER_INFO
+		LIMIT 0, 10
+	</select>
+
 </mapper>

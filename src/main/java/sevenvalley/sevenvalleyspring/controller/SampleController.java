@@ -47,11 +47,13 @@ public class SampleController {
 		return result;
 	}
 
-	@RequestMapping("/t1")
-	@ResponseBody
-	public Map<String, Object> adminDoLogin(@RequestParam HashMap<String, Object> params) {
-		Map<String, Object> result = sampleService.adminDoLogin(params);
-		return result;
+	@RequestMapping("/testView")
+	public String adminDoLogin(@RequestParam HashMap<String, Object> params, Model model) {
+		Map<String, Object> result1 = sampleService.adminDoLogin(params);
+		Map<String, Object> result2 = sampleService.adminList(params);
+		model.addAttribute("result1",result1);
+		model.addAttribute("result2",result2);
+		return "testView";
 	}
 	
 }

@@ -25,4 +25,8 @@ public class SampleService {
 	public Map<String, Object> adminDoLogin(HashMap<String, Object> params) {
 		return sampleDAO.AdminDoLogin(params);
 	}
+
+	public Map<String, Object> adminList(HashMap<String, Object> params) {
+		return sampleDAO.adminList(params);
+	}
 }

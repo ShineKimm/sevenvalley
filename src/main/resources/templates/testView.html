@@ -1,10 +1,30 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
+<body>
+<tr th:object="${result1}">
+  <td><span th:text="*{cnt}"></span></td>
+</tr>
+
+<h1 th:text="${result1.cnt}"></h1>
+
+<a th:href="@{/hello}">헬로우 링크</a><br/>
+
+<tr th:each="list : ${result1}">
+  <td span th:text="${list}">
+  </td>
+</tr>
+<br/>
+
+<th:block th:if="${result1.cnt} == 72">
+  <td><span>같습니다</span></td>
+</th:block>
+<th:block th:unless="${result1.cnt} == 72">
+  <td><span>다릅니다.</span></td>
+</th:block>
+
+</body>
 <head>
   <meta charset="UTF-8">
-  <title>$Title$</title>
+  <title>Title</title>
 </head>
-<body>
-$END$
-</body>
 </html>
